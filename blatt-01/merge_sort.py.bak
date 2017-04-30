@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+# @Author: David Leimroth
+# @Date:   2017-04-25 14:52:38
+# @Last Modified by:   David Leimroth
+# @Last Modified time: 2017-04-29 22:04:53
+
+
+def merge_sort(arr):
+    print('started merge_sort')
+	if len(arr) <= 1:
+		return arr
+    for i in range(0, array_length_half, 2):
+        j = i
+        while j  < len(arr):
+            merge(arr, math.)
+	'''
+    lengt = len(arr)
+    print('length', length)
+    size_to_check = 1
+
+    while size_to_check < length:
+        # do something
+        left = 0
+        while left < length:
+            print('left', left)
+            # do someting
+            cond_one = left - 1 + size_to_check * 2
+            cond_two = length - 1
+            # calculate right
+            right = cond_one if cond_one < cond_two else cond_two
+            #merge(arr, left, left - 1 + size_to_check, right)
+            # increase left by size_to_check times two
+            left = size_to_check * 2
+        # double size_to_check
+        print('size_to_check', size_to_check)
+        size_to_check *= 2
+
+
+#def merge(arr, left, middle, right):
+'''Merge elements of two given lists
+
+    '''
+ #   pass
+
+
+if __name__ == "__main__":
+    print('started __main__')
+    #merge_sort([10, 0, 2, 1, 1, 2, 3, 7, 6, 4])
+
+'''
+
+round 1:
+i = 0
+       i       i + 1
+-> arr[0] && arr[1]
+
+round 2:
+i = 2:
+       i       i + 1
+-> arr[2] && arr[3]
+
+
+round 3:
+i = 4
+       i       i + 1
+-> arr[4] && arr[5]
+
+    4   2   5   2   0   9   2
+    \   /   \   /   \   |   /
+    (2  4)  (2  5)  (0  2   9)
+    \   |   |   /   \   |   /
+
+
+
+'''
