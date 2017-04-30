@@ -43,25 +43,17 @@ def merge(arr, left, middle, right):
     itr, itr1, itr2 = 0, 0, 0
 
     while itr1 < arr1len or itr2 < arr2len:
-        print('arr', arr)
         if itr1 < arr1len and (itr2 == arr2len or arr1[itr1] <= arr2[itr2]):
-            # print('first if statement')
             temp_arr.append(arr1[itr1])
-            # print('len(arr)', len(arr), 'itr', itr)
-            arr[itr], arr[itr + 1] = arr1[itr1], arr[itr]    
             itr1 += 1
         if itr2 < arr2len and (itr1 == arr1len or arr2[itr2] <= arr1[itr1]):
-            # print('second if statement')
             temp_arr.append(arr2[itr2])
-            arr[itr], arr[itr + 1] = arr2[itr2], arr[itr]
             itr2 += 1
         arr1 = arr[left:middle]
         arr2 = arr[middle:right]
         itr += 1
-    '''
     for i in range(right - 1, left - 1, -1):
         arr[i] = temp_arr.pop()
-    '''
 
 
 if __name__ == "__main__":
