@@ -9,6 +9,9 @@ Author: Hannah Bast <bast@cs.uni-freiburg.de>,
 def merge_sort(arr):
     '''Takes an array arr and sorts it
 
+    >>> merge_sort([])
+    []
+
     >>> merge_sort([10])
     [10]
 
