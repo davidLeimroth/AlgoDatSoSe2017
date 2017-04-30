@@ -22,7 +22,7 @@ def merge_sort(arr):
             cond_one = left + size_to_sort * 2
             cond_two = length
             right = cond_one if cond_one < cond_two else cond_two
-            merge(arr, left, left + size_to_sort, right)
+            arr = merge(arr, left, left + size_to_sort, right)
             # increase size of left
             left += size_to_sort * 2
 
@@ -33,8 +33,20 @@ def merge_sort(arr):
 
 def merge(arr, left, middle, right):
     '''Merge elements of two given lists
-    '''
 
+    >>> merge([0, 1, 5, 2, 5], 0, 3, 5)
+    [0, 1, 2, 5, 5]
+
+    >>> merge([], 0, 0, 1)
+    []
+
+    >>> merge([3, 10, 1, 2, 1, 2, 6, 3], 6, 7, 8)
+    [3, 10, 1, 2, 1, 2, 3, 6]
+
+    '''
+    if len(arr) <= 1:
+        return arr
+    arr = arr[:]
     arr1 = arr[left:middle]
     arr2 = arr[middle:right]
     temp_arr = []
@@ -54,6 +66,7 @@ def merge(arr, left, middle, right):
         itr += 1
     for i in range(right - 1, left - 1, -1):
         arr[i] = temp_arr.pop()
+    return arr
 
 
 if __name__ == "__main__":
