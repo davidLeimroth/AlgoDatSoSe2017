@@ -1,3 +1,11 @@
+"""
+Copyright 2017, University of Freiburg,
+Chair of Algorithms and Data Structures.
+Author: Hannah Bast <bast@cs.uni-freiburg.de>,
+        David Leimroth <david.leimroth@jupiter.uni-freiburg.de>
+"""
+
+
 def merge_sort(arr):
     '''Takes an array arr and sorts it
 
@@ -32,7 +40,7 @@ def merge_sort(arr):
 
 
 def merge(arr, left, middle, right):
-    '''Merge elements of two given lists
+    '''Merge elements a given lists and points for sublists
 
     >>> merge([0, 1, 5, 2, 5], 0, 3, 5)
     [0, 1, 2, 5, 5]
@@ -54,6 +62,7 @@ def merge(arr, left, middle, right):
     arr1len, arr2len = len(arr1), len(arr2)
     itr, itr1, itr2 = 0, 0, 0
 
+    # structure taken from lecture
     while itr1 < arr1len or itr2 < arr2len:
         if itr1 < arr1len and (itr2 == arr2len or arr1[itr1] <= arr2[itr2]):
             temp_arr.append(arr1[itr1])
@@ -61,8 +70,6 @@ def merge(arr, left, middle, right):
         if itr2 < arr2len and (itr1 == arr1len or arr2[itr2] <= arr1[itr1]):
             temp_arr.append(arr2[itr2])
             itr2 += 1
-        arr1 = arr[left:middle]
-        arr2 = arr[middle:right]
         itr += 1
     for i in range(right - 1, left - 1, -1):
         arr[i] = temp_arr.pop()
